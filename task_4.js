@@ -1,32 +1,33 @@
 "use strict";
-// 4 задание
-/**
- * Даны 4 функции, выполняющие 4 основные арифметические операции (сложение, вычитание, умножение, деление)
- * @param {number} a пояснение для "a"
- * @param {number} b пояснение для "b"
- * @returns {number} пояснение для возвращаемого значения
- */
-function sum(a, b) {
-    return a + b;
-}
+const products = [
+    {
+        id: 3,
+        price: 127,
+        photos: [
+            "1.jpg",
+            "2.jpg",
+        ]
+    },
+    {
+        id: 5,
+        price: 499,
+        photos: []
+    },
+    {
+        id: 10,
+        price: 26,
+        photos: [
+            "3.jpg"
+        ]
+    },
+    {
+        id: 8,
+        price: 78,
+    },
+];
 
-function subtraction(a, b) {
-    return a - b;
-}
+let photoProducts = products.filter(function (photo) {
+    console.log(photo.isJpg == ".jpg");
+}) // Почему-то выводит false.
 
-function multiply(a, b) {
-    return a * b;
-}
-
-function division(a, b) {
-    return a / b;
-}
-
-let result_1 = sum(4, 1);
-let result_2 = subtraction(4, 1);
-let result_3 = multiply(4, 1);
-let result_4 = division(4, 1);
-alert("Сумма: " + result_1);
-alert("Разность: " + result_2);
-alert("Произведение: " + result_3);
-alert("Деление: " + result_4);
+products.sort(products.price); // Аналогично предыдущему комментарию.
